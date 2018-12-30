@@ -87,6 +87,8 @@ https://www.codeproject.com/Tips/747223/CalcStar-A-Cplusplus-Math-Expression-Eva
 
 If functions like sum refer to a range of cells, the syntax is sum(r1c1:r2c2). Single cell ranges are allowed but are the full range syntax (e.g., r1c1:r1c1). You can also use cell references directly in a function like Excel does. For example =r1c23 + r2c2 is a legal function. Referencing different pages would look like =sum(SheetName:r1c1:r15c1). Below is a screenshot of a multi spreadsheet test application provided.
 
+![](QTCalcStar/Documentation/QTCalcStar%20Test%20Application%20GUI.jpg)
+
 ## License
 
 This article, along with any associated source code and files, is licensed under [The BSD License](http://www.opensource.org/licenses/bsd-license.php)
