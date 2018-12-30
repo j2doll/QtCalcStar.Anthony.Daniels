@@ -2,9 +2,9 @@
 
 QtCalcStar is an adaptation of the GtCalc engine with a QT Spreadsheet interface. It is based on the QT Spreadsheet supplied from their website.
 
-- Author: Anthony Daniels
+- Author: [Anthony Daniels](https://www.codeproject.com/Members/trident99)
 - Email: AnthonyDaniels99@gmail.com
-- Link : [https://www.codeproject.com/Tips/1226512/QtCalcStar-A-QT-Cplusplus-Spreadsheet-and-Workbook](https://www.codeproject.com/Tips/1226512/QtCalcStar-A-QT-Cplusplus-Spreadsheet-and-Workbook)
+- Project page : https://www.codeproject.com/Tips/1226512/QtCalcStar-A-QT-Cplusplus-Spreadsheet-and-Workbook
 
 ## Introduction
 
@@ -17,9 +17,21 @@ As an engineer, I am constantly in need of embedding spreadsheet functionality i
 
 ## Basic Functions (Calcstar)
 
-Name | Signature | Name        | Signature |
------+-----------+-------------+-----------+
-Add  | +         | Boolean And | &&        |
+| Name           | Signature | Name                  | Signature |
+|----------------|-----------|-----------------------|-----------|
+| Add            | +         | Boolean And           | &&        |
+| Subtract       | -         | Boolean Equal         | ==        |
+| Multiply       | *         | Boolean Not           | !         |
+| Divide         | /         | Boolean Not Equal     | !=        |
+| ponential      | exp       | Boolean Or            | ||        |
+| Power          | pow       | Greater Than          | >         |
+| Natural Log    | ln        | Greater Than or Equal | >=        |
+| Log2           | log2      | Less Than             | <         |
+| Log10          | log10     | Less Than or Equal    | <=        |
+| Absolute Value | abs       | Ceiling               | ceil      |
+| Square Root    | sqrt      | Floor                 | floor     |
+| Truncate       | trunc     |                       |           |
+
 
 
 
