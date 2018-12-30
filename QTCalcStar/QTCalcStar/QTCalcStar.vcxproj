@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B12702AD-ABFB-343A-A199-8E24837244A3}</ProjectGuid>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_XML_LIB;QT_PRINTSUPPORT_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtPrintSupport;..\HTL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir);$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;Qt5Xmld.lib;Qt5PrintSupportd.lib;HTLV20Debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_XML_LIB;QT_PRINTSUPPORT_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtPrintSupport;..\HTL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat />
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir);$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;Qt5Xmld.lib;Qt5PrintSupportd.lib;HTLV20Release.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QTCalcStar.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QTPrintView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QTSpreadSheet.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QTSpreadSheetDelegate.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QTWorkbook.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_QTCalcStar.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QTCalcStar.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QTPrintView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QTSpreadSheet.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QTSpreadSheetDelegate.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QTWorkbook.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GtBaseFunctions\GtOpCount.cpp" />
+    <ClCompile Include="GtBaseFunctions\GtOpDegrees.cpp" />
+    <ClCompile Include="GtBaseFunctions\GtOpENumber.cpp" />
+    <ClCompile Include="GtBaseFunctions\GtOpEven.cpp" />
+    <ClCompile Include="GtBaseFunctions\GtOpFactorial.cpp" />
+    <ClCompile Include="GtBaseFunctions\GtOpMaximum.cpp" />
+    <ClCompile Include="GtBaseFunctions\GtOpMean.cpp" />
+    <ClCompile Include="GtBaseFunctions\GtOpMedian.cpp" />
+    <ClCompile Include="GtBaseFunctions\GtOpMinimum.cpp" />
+    <ClCompile Include="GtBaseFunctions\GtOpModulo.cpp" />
+    <ClCompile Include="GtBaseFunctions\GtOpOdd.cpp" />
+    <ClCompile Include="GtBaseFunctions\GtOpPINumber.cpp" />
+    <ClCompile Include="GtBaseFunctions\GtOpRadians.cpp" />
+    <ClCompile Include="GtBaseFunctions\GtOpRange.cpp" />
+    <ClCompile Include="GtBaseFunctions\GtOpRowCol.cpp" />
+    <ClCompile Include="GtBaseFunctions\GtOpSheetRange.cpp" />
+    <ClCompile Include="GtBaseFunctions\GtOpSheetRowCol.cpp" />
+    <ClCompile Include="GtBaseFunctions\GtOpSign.cpp" />
+    <ClCompile Include="GtBaseFunctions\GtOpStandardDeviation.cpp" />
+    <ClCompile Include="GtBaseFunctions\GtOpSum.cpp" />
+    <ClCompile Include="GtBaseFunctions\GtOpVariance.cpp" />
+    <ClCompile Include="GtCalcEnums.cpp" />
+    <ClCompile Include="GtCalcStructs.cpp" />
+    <ClCompile Include="GtCellData.cpp" />
+    <ClCompile Include="GtFunctionEvaluator.cpp" />
+    <ClCompile Include="GtFunctionValidator.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpAbsoluteValue.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpAdd.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpAssign.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpBoolAnd.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpBoolEqual.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpBoolNot.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpBoolNotEqual.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpBoolOr.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpCeiling.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpDivide.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpExponential.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpFloor.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpGreaterThan.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpGreaterThanEqual.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpLessThan.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpLessThanEqual.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpLog10.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpLog2.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpMultiply.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpNaturalLog.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpNegative.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpPower.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpRound.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpSquareRoot.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpSubtract.cpp" />
+    <ClCompile Include="GtMathFunctions\GtOpTruncate.cpp" />
+    <ClCompile Include="GtMath\GtBasicMath.cpp" />
+    <ClCompile Include="GtOpBase.cpp" />
+    <ClCompile Include="GtOpBaseFactory.cpp" />
+    <ClCompile Include="GtRpnUnit.cpp" />
+    <ClCompile Include="GtSheetServer.cpp" />
+    <ClCompile Include="GtToken.cpp" />
+    <ClCompile Include="GtTrigFunctions\GtOpACos.cpp" />
+    <ClCompile Include="GtTrigFunctions\GtOpACosH.cpp" />
+    <ClCompile Include="GtTrigFunctions\GtOpASin.cpp" />
+    <ClCompile Include="GtTrigFunctions\GtOpASinH.cpp" />
+    <ClCompile Include="GtTrigFunctions\GtOpATan.cpp" />
+    <ClCompile Include="GtTrigFunctions\GtOpATanH.cpp" />
+    <ClCompile Include="GtTrigFunctions\GtOpCos.cpp" />
+    <ClCompile Include="GtTrigFunctions\GtOpCosH.cpp" />
+    <ClCompile Include="GtTrigFunctions\GtOpSin.cpp" />
+    <ClCompile Include="GtTrigFunctions\GtOpSinH.cpp" />
+    <ClCompile Include="GtTrigFunctions\GtOpTan.cpp" />
+    <ClCompile Include="GtTrigFunctions\GtOpTanH.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="QTCalcStar.cpp" />
+    <ClCompile Include="QTPrintView.cpp" />
+    <ClCompile Include="QTSpreadSheet.cpp" />
+    <ClCompile Include="QTSpreadSheetDelegate.cpp" />
+    <ClCompile Include="QTWorkbook.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QTCalcStar.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing QTCalcStar.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_PRINTSUPPORT_LIB  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtPrintSupport" "-I.\..\HTL"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing QTCalcStar.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_PRINTSUPPORT_LIB  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtPrintSupport" "-I.\..\HTL"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QTCalcStar.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_QTCalcStar.h" />
+    <ClInclude Include="GeneratedFiles\ui_QTWorkbook.h" />
+    <ClInclude Include="GtBaseFunctions\GtOpCount.h" />
+    <ClInclude Include="GtBaseFunctions\GtOpDegrees.h" />
+    <ClInclude Include="GtBaseFunctions\GtOpENumber.h" />
+    <ClInclude Include="GtBaseFunctions\GtOpEven.h" />
+    <ClInclude Include="GtBaseFunctions\GtOpFactorial.h" />
+    <ClInclude Include="GtBaseFunctions\GtOpMaximum.h" />
+    <ClInclude Include="GtBaseFunctions\GtOpMean.h" />
+    <ClInclude Include="GtBaseFunctions\GtOpMedian.h" />
+    <ClInclude Include="GtBaseFunctions\GtOpMinimum.h" />
+    <ClInclude Include="GtBaseFunctions\GtOpModulo.h" />
+    <ClInclude Include="GtBaseFunctions\GtOpOdd.h" />
+    <ClInclude Include="GtBaseFunctions\GtOpPINumber.h" />
+    <ClInclude Include="GtBaseFunctions\GtOpRadians.h" />
+    <ClInclude Include="GtBaseFunctions\GtOpRange.h" />
+    <ClInclude Include="GtBaseFunctions\GtOpRowCol.h" />
+    <ClInclude Include="GtBaseFunctions\GtOpSheetRange.h" />
+    <ClInclude Include="GtBaseFunctions\GtOpSheetRowCol.h" />
+    <ClInclude Include="GtBaseFunctions\GtOpSign.h" />
+    <ClInclude Include="GtBaseFunctions\GtOpStandardDeviation.h" />
+    <ClInclude Include="GtBaseFunctions\GtOpSum.h" />
+    <ClInclude Include="GtBaseFunctions\GtOpVariance.h" />
+    <ClInclude Include="GtCalcEnums.h" />
+    <ClInclude Include="GtCalcLibRefs.h" />
+    <ClInclude Include="GtCalcStructs.h" />
+    <ClInclude Include="GtCellData.h" />
+    <ClInclude Include="GtFunctionEvaluator.h" />
+    <ClInclude Include="GtFunctionValidator.h" />
+    <ClInclude Include="GtMathFunctions\GtOpAbsoluteValue.h" />
+    <ClInclude Include="GtMathFunctions\GtOpAdd.h" />
+    <ClInclude Include="GtMathFunctions\GtOpAssign.h" />
+    <ClInclude Include="GtMathFunctions\GtOpBoolAnd.h" />
+    <ClInclude Include="GtMathFunctions\GtOpBoolEqual.h" />
+    <ClInclude Include="GtMathFunctions\GtOpBoolNot.h" />
+    <ClInclude Include="GtMathFunctions\GtOpBoolNotEqual.h" />
+    <ClInclude Include="GtMathFunctions\GtOpBoolOr.h" />
+    <ClInclude Include="GtMathFunctions\GtOpCeiling.h" />
+    <ClInclude Include="GtMathFunctions\GtOpDivide.h" />
+    <ClInclude Include="GtMathFunctions\GtOpExponential.h" />
+    <ClInclude Include="GtMathFunctions\GtOpFloor.h" />
+    <ClInclude Include="GtMathFunctions\GtOpGreaterThan.h" />
+    <ClInclude Include="GtMathFunctions\GtOpGreaterThanEqual.h" />
+    <ClInclude Include="GtMathFunctions\GtOpLessThan.h" />
+    <ClInclude Include="GtMathFunctions\GtOpLessThanEqual.h" />
+    <ClInclude Include="GtMathFunctions\GtOpLog10.h" />
+    <ClInclude Include="GtMathFunctions\GtOpLog2.h" />
+    <ClInclude Include="GtMathFunctions\GtOpMultiply.h" />
+    <ClInclude Include="GtMathFunctions\GtOpNaturalLog.h" />
+    <ClInclude Include="GtMathFunctions\GtOpNegative.h" />
+    <ClInclude Include="GtMathFunctions\GtOpPower.h" />
+    <ClInclude Include="GtMathFunctions\GtOpRound.h" />
+    <ClInclude Include="GtMathFunctions\GtOpSquareRoot.h" />
+    <ClInclude Include="GtMathFunctions\GtOpSubtract.h" />
+    <ClInclude Include="GtMathFunctions\GtOpTruncate.h" />
+    <ClInclude Include="GtMath\GtBasicMath.h" />
+    <ClInclude Include="GtOpBase.h" />
+    <ClInclude Include="GtOpBaseFactory.h" />
+    <ClInclude Include="GtRpnUnit.h" />
+    <ClInclude Include="GtSheetServer.h" />
+    <ClInclude Include="GtToken.h" />
+    <ClInclude Include="GtTrigFunctions\GtOpACos.h" />
+    <ClInclude Include="GtTrigFunctions\GtOpACosH.h" />
+    <ClInclude Include="GtTrigFunctions\GtOpASin.h" />
+    <ClInclude Include="GtTrigFunctions\GtOpASinH.h" />
+    <ClInclude Include="GtTrigFunctions\GtOpATan.h" />
+    <ClInclude Include="GtTrigFunctions\GtOpATanH.h" />
+    <ClInclude Include="GtTrigFunctions\GtOpCos.h" />
+    <ClInclude Include="GtTrigFunctions\GtOpCosH.h" />
+    <ClInclude Include="GtTrigFunctions\GtOpSin.h" />
+    <ClInclude Include="GtTrigFunctions\GtOpSinH.h" />
+    <ClInclude Include="GtTrigFunctions\GtOpTan.h" />
+    <ClInclude Include="GtTrigFunctions\GtOpTanH.h" />
+    <ClInclude Include="modGtMath.h" />
+    <CustomBuild Include="QTWorkbook.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing QTWorkbook.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_PRINTSUPPORT_LIB  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtPrintSupport" "-I.\..\HTL"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing QTWorkbook.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_PRINTSUPPORT_LIB  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtPrintSupport" "-I.\..\HTL"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QTSpreadSheetDelegate.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing QTSpreadSheetDelegate.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_PRINTSUPPORT_LIB  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtPrintSupport" "-I.\..\HTL"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing QTSpreadSheetDelegate.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_PRINTSUPPORT_LIB  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtPrintSupport" "-I.\..\HTL"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QTSpreadSheet.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing QTSpreadSheet.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_PRINTSUPPORT_LIB  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtPrintSupport" "-I.\..\HTL"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing QTSpreadSheet.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_PRINTSUPPORT_LIB  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtPrintSupport" "-I.\..\HTL"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QTPrintView.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing QTPrintView.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_PRINTSUPPORT_LIB  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtPrintSupport" "-I.\..\HTL"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing QTPrintView.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_PRINTSUPPORT_LIB  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtPrintSupport" "-I.\..\HTL"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QTCalcStar.qrc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QTWorkbook.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" Qt5Version_x0020_Win32="Qt 5.8 32bit" MocOptions="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{29E1A554-7AA6-4F5C-B7C6-167402648CCC}</ProjectGuid>
+    <RootNamespace>HTL</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>$(ProjectName)V20Debug</TargetName>
+    <TargetExt>.dll</TargetExt>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>$(ProjectName)V20Release</TargetName>
+    <TargetExt>.dll</TargetExt>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>msvcrtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="HtlArchive\ArchJSON\HtlJSONReader.h" />
+    <ClInclude Include="HtlArchive\ArchJSON\HtlJSONWriter.h" />
+    <ClInclude Include="HtlArchive\ArchXDL\HtlXDLReader.h" />
+    <ClInclude Include="HtlArchive\ArchXDL\HtlXDLStructs.h" />
+    <ClInclude Include="HtlArchive\ArchXDL\HtlXDLWriter.h" />
+    <ClInclude Include="HtlArchive\ArchXML\HtlXMLReader.h" />
+    <ClInclude Include="HtlArchive\ArchXML\HtlXMLStructs.h" />
+    <ClInclude Include="HtlArchive\ArchXML\HtlXMLWriter.h" />
+    <ClInclude Include="HtlArchive\HtlAttribute.h" />
+    <ClInclude Include="HtlArchive\HtlComment.h" />
+    <ClInclude Include="HtlArchive\HtlDocument.h" />
+    <ClInclude Include="HtlArchive\HtlElement.h" />
+    <ClInclude Include="HtlArchive\HtlMemVar.h" />
+    <ClInclude Include="HtlArchive\HtlMemVar2.h" />
+    <ClInclude Include="HtlArchive\HtlMemVarItem.h" />
+    <ClInclude Include="HtlArchive\HtlNode.h" />
+    <ClInclude Include="HtlArchive\HtlProcess.h" />
+    <ClInclude Include="HtlAtomic\HtlAtomic.h" />
+    <ClInclude Include="HtlBase\Htl1DIndex.h" />
+    <ClInclude Include="HtlBase\Htl2DIndex.h" />
+    <ClInclude Include="HtlBase\Htl3DIndex.h" />
+    <ClInclude Include="HtlBase\HtlBase.h" />
+    <ClInclude Include="HtlBase\HtlBaseFactory.h" />
+    <ClInclude Include="HtlBase\HtlFactory.h" />
+    <ClInclude Include="HtlBiDirContainer\HtlAggregateManager.h" />
+    <ClInclude Include="HtlBiDirContainer\HtlCompositeManager.h" />
+    <ClInclude Include="HtlBiDirContainer\HtlObjectAggPtr.h" />
+    <ClInclude Include="HtlBiDirContainer\HtlObjectCompPtr.h" />
+    <ClInclude Include="HtlBiDirContainer\modHtlCollectionAccessors.h" />
+    <ClInclude Include="HtlContainer\Htl1DList.h" />
+    <ClInclude Include="HtlContainer\Htl1DVector.h" />
+    <ClInclude Include="HtlContainer\Htl2DArray.h" />
+    <ClInclude Include="HtlContainer\Htl3DMatrix.h" />
+    <ClInclude Include="HtlContainer\HtlContainer.h" />
+    <ClInclude Include="HtlContainer\HtlListMap.h" />
+    <ClInclude Include="HtlContainer\HtlListNode.h" />
+    <ClInclude Include="HtlContainer\HtlMap.h" />
+    <ClInclude Include="HtlContainer\HtlTreeNode.h" />
+    <ClInclude Include="HtlContainer\HtlVectorNode.h" />
+    <ClInclude Include="HtlContainer\StlMap.h" />
+    <ClInclude Include="HtlContainer\StlVector.h" />
+    <ClInclude Include="HtlGlobal\HtlDebugPrinter.h" />
+    <ClInclude Include="HtlGlobal\HtlEnums.h" />
+    <ClInclude Include="HtlGlobal\HtlMemAlloc.h" />
+    <ClInclude Include="HtlGlobal\HtlStructs.h" />
+    <ClInclude Include="HtlGlobal\HtlTypeInfo.h" />
+    <ClInclude Include="HtlGUID\HtlGUID128.h" />
+    <ClInclude Include="HtlGUID\HtlGUID256.h" />
+    <ClInclude Include="HtlGUID\HtlGUID32.h" />
+    <ClInclude Include="HtlGUID\HtlGUID64.h" />
+    <ClInclude Include="HtlMacro\modAccessorMacros.h" />
+    <ClInclude Include="HtlMacro\modHtlMacros.h" />
+    <ClInclude Include="HtlMacro\modMemVarMacros.h" />
+    <ClInclude Include="HtlMath\HtlBasicMath.h" />
+    <ClInclude Include="HtlObject\HtlObject.h" />
+    <ClInclude Include="HtlObject\HtlObjectMap.h" />
+    <ClInclude Include="HtlRandNumGen\HtlRandNumDist.h" />
+    <ClInclude Include="HtlRandNumGen\HtlRandNumGen.h" />
+    <ClInclude Include="HtlRandNumGen\RandDistGenerators\HtlExponential.h" />
+    <ClInclude Include="HtlRandNumGen\RandDistGenerators\HtlGamma.h" />
+    <ClInclude Include="HtlRandNumGen\RandDistGenerators\HtlGaussian.h" />
+    <ClInclude Include="HtlRandNumGen\RandDistGenerators\HtlPoisson.h" />
+    <ClInclude Include="HtlRandNumGen\RandDistGenerators\HtlUniform.h" />
+    <ClInclude Include="HtlRandNumGen\RandNumGenerators\HtlLCGenerator.h" />
+    <ClInclude Include="HtlRandNumGen\RandNumGenerators\HtlMersenneGenerator.h" />
+    <ClInclude Include="HtlRandNumGen\RandNumGenerators\HtlMLCGenerator.h" />
+    <ClInclude Include="HtlSignalSlot\HtlConnection00.h" />
+    <ClInclude Include="HtlSignalSlot\HtlConnection01.h" />
+    <ClInclude Include="HtlSignalSlot\HtlConnection02.h" />
+    <ClInclude Include="HtlSignalSlot\HtlConnection03.h" />
+    <ClInclude Include="HtlSignalSlot\HtlSignal.h" />
+    <ClInclude Include="HtlSignalSlot\HtlSignal00.h" />
+    <ClInclude Include="HtlSignalSlot\HtlSignal01.h" />
+    <ClInclude Include="HtlSignalSlot\HtlSignal02.h" />
+    <ClInclude Include="HtlSignalSlot\HtlSignal03.h" />
+    <ClInclude Include="HtlSignalSlot\HtlSlot.h" />
+    <ClInclude Include="HtlString\HtlString.h" />
+    <ClInclude Include="HtlString\HtlStringAlgorithms.h" />
+    <ClInclude Include="HtlString\StlStringAlgorithms.h" />
+    <ClInclude Include="HtlTest\HtlTestApp.h" />
+    <ClInclude Include="HtlTest\HtlTestFactory.h" />
+    <ClInclude Include="HtlTest\HtlTestNode.h" />
+    <ClInclude Include="HtlThread\HtlMutex.h" />
+    <ClInclude Include="HtlThread\HtlSpinLock.h" />
+    <ClInclude Include="HtlThread\HtlThread.h" />
+    <ClInclude Include="HtlThread\HtlThreadData.h" />
+    <ClInclude Include="HtlThread\HtlThreadMap.h" />
+    <ClInclude Include="HtlTime\HtlStopWatch.h" />
+    <ClInclude Include="HtlTime\HtlTimeBase.h" />
+    <ClInclude Include="HtlTime\HtlTimer.h" />
+    <ClInclude Include="modHtlArchive.h" />
+    <ClInclude Include="modHtlAtomic.h" />
+    <ClInclude Include="modHtlBase.h" />
+    <ClInclude Include="modHtlBiDirContainer.h" />
+    <ClInclude Include="modHtlContainer.h" />
+    <ClInclude Include="modHtlGlobal.h" />
+    <ClInclude Include="modHtlGUID.h" />
+    <ClInclude Include="modHtlLibRefs.h" />
+    <ClInclude Include="modHtlMacro.h" />
+    <ClInclude Include="modHtlMath.h" />
+    <ClInclude Include="modHtlObject.h" />
+    <ClInclude Include="modHtlRandNumGen.h" />
+    <ClInclude Include="modHtlSignalSlot.h" />
+    <ClInclude Include="modHtlString.h" />
+    <ClInclude Include="modHtlTest.h" />
+    <ClInclude Include="modHtlThread.h" />
+    <ClInclude Include="modHtlTime.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="HtlArchive\ArchJSON\HtlJSONReader.cpp" />
+    <ClCompile Include="HtlArchive\ArchJSON\HtlJSONWriter.cpp" />
+    <ClCompile Include="HtlArchive\ArchXDL\HtlXDLReader.cpp" />
+    <ClCompile Include="HtlArchive\ArchXDL\HtlXDLStructs.cpp" />
+    <ClCompile Include="HtlArchive\ArchXDL\HtlXDLWriter.cpp" />
+    <ClCompile Include="HtlArchive\ArchXML\HtlXMLReader.cpp" />
+    <ClCompile Include="HtlArchive\ArchXML\HtlXMLStructs.cpp" />
+    <ClCompile Include="HtlArchive\ArchXML\HtlXMLWriter.cpp" />
+    <ClCompile Include="HtlArchive\HtlAttribute.cpp" />
+    <ClCompile Include="HtlArchive\HtlComment.cpp" />
+    <ClCompile Include="HtlArchive\HtlDocument.cpp" />
+    <ClCompile Include="HtlArchive\HtlElement.cpp" />
+    <ClCompile Include="HtlArchive\HtlMemVar.cpp" />
+    <ClCompile Include="HtlArchive\HtlMemVar2.cpp" />
+    <ClCompile Include="HtlArchive\HtlMemVarItem.cpp" />
+    <ClCompile Include="HtlArchive\HtlNode.cpp" />
+    <ClCompile Include="HtlArchive\HtlProcess.cpp" />
+    <ClCompile Include="HtlAtomic\HtlAtomic.cpp" />
+    <ClCompile Include="HtlBase\Htl1DIndex.cpp" />
+    <ClCompile Include="HtlBase\Htl2DIndex.cpp" />
+    <ClCompile Include="HtlBase\Htl3DIndex.cpp" />
+    <ClCompile Include="HtlBase\HtlBase.cpp" />
+    <ClCompile Include="HtlBase\HtlBaseFactory.cpp" />
+    <ClCompile Include="HtlBase\HtlFactory.cpp" />
+    <ClCompile Include="HtlBiDirContainer\HtlAggregateManager.cpp" />
+    <ClCompile Include="HtlBiDirContainer\HtlCompositeManager.cpp" />
+    <ClCompile Include="HtlBiDirContainer\HtlObjectAggPtr.cpp" />
+    <ClCompile Include="HtlBiDirContainer\HtlObjectCompPtr.cpp" />
+    <ClCompile Include="HtlContainer\Htl1DList.cpp" />
+    <ClCompile Include="HtlContainer\Htl1DVector.cpp" />
+    <ClCompile Include="HtlContainer\Htl2DArray.cpp" />
+    <ClCompile Include="HtlContainer\Htl3DMatrix.cpp" />
+    <ClCompile Include="HtlContainer\HtlContainer.cpp" />
+    <ClCompile Include="HtlContainer\HtlListMap.cpp" />
+    <ClCompile Include="HtlContainer\HtlListNode.cpp" />
+    <ClCompile Include="HtlContainer\HtlMap.cpp" />
+    <ClCompile Include="HtlContainer\HtlTreeNode.cpp" />
+    <ClCompile Include="HtlContainer\HtlVectorNode.cpp" />
+    <ClCompile Include="HtlContainer\StlMap.cpp" />
+    <ClCompile Include="HtlContainer\StlVector.cpp" />
+    <ClCompile Include="HtlGlobal\HtlDebugPrinter.cpp" />
+    <ClCompile Include="HtlGlobal\HtlEnums.cpp" />
+    <ClCompile Include="HtlGlobal\HtlMemAlloc.cpp" />
+    <ClCompile Include="HtlGlobal\HtlStructs.cpp" />
+    <ClCompile Include="HtlGlobal\HtlTypeInfo.cpp" />
+    <ClCompile Include="HtlGUID\HtlGUID128.cpp" />
+    <ClCompile Include="HtlGUID\HtlGUID256.cpp" />
+    <ClCompile Include="HtlGUID\HtlGUID32.cpp" />
+    <ClCompile Include="HtlGUID\HtlGUID64.cpp" />
+    <ClCompile Include="HtlMath\HtlBasicMath.cpp" />
+    <ClCompile Include="HtlObject\HtlObject.cpp" />
+    <ClCompile Include="HtlObject\HtlObjectMap.cpp" />
+    <ClCompile Include="HtlRandNumGen\HtlRandNumDist.cpp" />
+    <ClCompile Include="HtlRandNumGen\HtlRandNumGen.cpp" />
+    <ClCompile Include="HtlRandNumGen\RandDistGenerators\HtlExponential.cpp" />
+    <ClCompile Include="HtlRandNumGen\RandDistGenerators\HtlGamma.cpp" />
+    <ClCompile Include="HtlRandNumGen\RandDistGenerators\HtlGaussian.cpp" />
+    <ClCompile Include="HtlRandNumGen\RandDistGenerators\HtlPoisson.cpp" />
+    <ClCompile Include="HtlRandNumGen\RandDistGenerators\HtlUniform.cpp" />
+    <ClCompile Include="HtlRandNumGen\RandNumGenerators\HtlLCGenerator.cpp" />
+    <ClCompile Include="HtlRandNumGen\RandNumGenerators\HtlMersenneGenerator.cpp" />
+    <ClCompile Include="HtlRandNumGen\RandNumGenerators\HtlMLCGenerator.cpp" />
+    <ClCompile Include="HtlSignalSlot\HtlConnection00.cpp" />
+    <ClCompile Include="HtlSignalSlot\HtlConnection01.cpp" />
+    <ClCompile Include="HtlSignalSlot\HtlConnection02.cpp" />
+    <ClCompile Include="HtlSignalSlot\HtlConnection03.cpp" />
+    <ClCompile Include="HtlSignalSlot\HtlSignal.cpp" />
+    <ClCompile Include="HtlSignalSlot\HtlSignal00.cpp" />
+    <ClCompile Include="HtlSignalSlot\HtlSignal01.cpp" />
+    <ClCompile Include="HtlSignalSlot\HtlSignal02.cpp" />
+    <ClCompile Include="HtlSignalSlot\HtlSignal03.cpp" />
+    <ClCompile Include="HtlSignalSlot\HtlSlot.cpp" />
+    <ClCompile Include="HtlString\HtlString.cpp" />
+    <ClCompile Include="HtlString\HtlStringAlgorithms.cpp" />
+    <ClCompile Include="HtlString\StlStringAlgorithms.cpp" />
+    <ClCompile Include="HtlTest\HtlTestApp.cpp" />
+    <ClCompile Include="HtlTest\HtlTestFactory.cpp" />
+    <ClCompile Include="HtlTest\HtlTestNode.cpp" />
+    <ClCompile Include="HtlThread\HtlMutex.cpp" />
+    <ClCompile Include="HtlThread\HtlSpinLock.cpp" />
+    <ClCompile Include="HtlThread\HtlThread.cpp" />
+    <ClCompile Include="HtlThread\HtlThreadData.cpp" />
+    <ClCompile Include="HtlThread\HtlThreadMap.cpp" />
+    <ClCompile Include="HtlTime\HtlStopWatch.cpp" />
+    <ClCompile Include="HtlTime\HtlTimeBase.cpp" />
+    <ClCompile Include="HtlTime\HtlTimer.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
