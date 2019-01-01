@@ -91,9 +91,13 @@ If functions like sum refer to a range of cells, the syntax is sum(r1c1:r2c2). S
 
 ## License
 
-This article, along with any associated source code and files, is licensed under [The BSD License](http://www.opensource.org/licenses/bsd-license.php)
+- This article, along with any associated source code and files, is licensed under [The BSD License](http://www.opensource.org/licenses/bsd-license.php)
 
 ## About the Author
 
-[trident99](https://www.codeproject.com/Members/trident99)
+- [trident99](https://www.codeproject.com/Members/trident99)
 
+## :construction: Modifing
+
+- :warning: The current project is not be built. :yum:
+- modifiing now :scream:
