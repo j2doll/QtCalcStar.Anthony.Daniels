@@ -15,8 +15,8 @@ QT += core xml gui widgets printsupport
 
 # ----------------------------------------------------
 
-INCLUDEPATH += \
-./HTL
+# INCLUDEPATH += \
+# ./HTL
 
 # LIBS += \
 # -L"$(OutDir)" \
