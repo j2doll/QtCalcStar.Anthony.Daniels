@@ -104,4 +104,8 @@ If functions like sum refer to a range of cells, the syntax is sum(r1c1:r2c2). S
 - The current project is not be built.
 ```
  :yum:
+
 - modifiing now :scream:
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `#f03c15`
+
