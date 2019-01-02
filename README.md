@@ -99,10 +99,10 @@ If functions like sum refer to a range of cells, the syntax is sum(r1c1:r2c2). S
 
 ## :construction: Modifing
 
-- :warning: 
-```diff 
-- The current project is not be built.
-```
+- :warning: \
+```html 
+<font color="green"> The current project is not be built. </font>
+``` \
  :yum:
 
 - modifiing now :scream:
