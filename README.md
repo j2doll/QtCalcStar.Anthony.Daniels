@@ -99,5 +99,5 @@ If functions like sum refer to a range of cells, the syntax is sum(r1c1:r2c2). S
 
 ## :construction: Modifing
 
-- :warning: <span style="color:red">The current project is not be built.</span> :yum:
+- :warning: <span style="color:red; font-family:Georgia; font-size:2em;">The current project is not be built.</span> :yum:
 - modifiing now :scream:
